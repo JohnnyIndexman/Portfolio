@@ -4,23 +4,27 @@ import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { MdOutlineClose } from "react-icons/md";
 
 function Header() {
-    const [isClicked, setIsClicked] = useState(false)
+    const isClicked = true
     const [styles, setStyles] = useState({
         display: 'none'
     })
 
     const handleOpen = () =>{
-        setIsClicked(true)
-        setStyles({
-            display:"block"
-        })
+        if(isClicked){
+            setStyles({
+                display:"block"
+            })
+        }
+        
     }
 
     const handleClose = () =>{
-        setIsClicked(true)
-        setStyles({
-            display: 'none'
-        })
+        if(isClicked){
+            setStyles({
+                display: 'none'
+            })
+        }
+        
     }
 
 /*const style = {
