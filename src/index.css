@@ -455,7 +455,7 @@ textarea:focus{
   grid-template-columns: auto auto auto;
 }
 
-@media (max-width: 600px){
+@media (max-width: 768px){
   .hamburger{
     display: block;
   }
@@ -642,3 +642,4 @@ textarea:focus{
     }
   
 }
+
