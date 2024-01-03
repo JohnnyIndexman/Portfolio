@@ -3,6 +3,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion as m } from 'framer-motion'
 
 function Contact() {
   const form = useRef();
@@ -10,7 +11,7 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm('service_n6wbrrt', 'template_0cyh3rm', form.current, 'QblXBudopYQofeY6R')
       .then((result) => {
         console.log(result.text);
       }, (error) => {
@@ -18,7 +19,12 @@ function Contact() {
       });
   };
   return (
-    <div className='contact mb'>
+    <m.div
+      initial={{ y: '100%' }}
+      animate={{ y: '0%' }}
+      transition={{ duration: 1, ease: 'easeOut' }}
+      exit={{ opacity: 1 }}
+      className='contact mb'>
       <div className="contact-contain">
         <div className="form mb">
           <h1>Contact Me</h1>
@@ -39,12 +45,12 @@ function Contact() {
               placeholder='Enter Your Message Here...'
               className='textarea'
             />
-           {/* <input type="submit"
+            {/* <input type="submit"
               value="Send"
               className='button'
   />*/}
             <button className='button'
-            onSubmit={sendEmail}
+              type='submit'
             >Send
             </button>
           </form>
@@ -64,7 +70,7 @@ function Contact() {
         </div>
       </div>
 
-    </div>
+    </m.div>
   )
 }
 

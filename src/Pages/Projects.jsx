@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { motion as m } from 'framer-motion'
 
 
 
@@ -25,7 +26,12 @@ function Projects() {
   
 
   return (
-    <div className='projects'>
+    <m.div
+    initial={{y: '100%'}}
+    animate={{ y: '0%' }}
+    transition={{ duration: 1, ease: 'easeOut' }}
+    exit={{opacity: 1}}
+    className='projects'>
       {error && <div>{error}</div>}
       {data && data.map(d => (
         <Link to={d.link} key={d.id}>
@@ -35,7 +41,7 @@ function Projects() {
           </div>
         </Link>
       ))}
-    </div>
+    </m.div>
   )
 }
 

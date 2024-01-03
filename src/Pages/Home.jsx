@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Image from './Image/images (7).jpeg'
 import { useNavigate, Link } from 'react-router-dom';
+import { easeOut, motion as m } from 'framer-motion'
 
 
 
@@ -53,13 +54,42 @@ function Home() {
   }
 
   return (
-    <div className='home-page'>
+    <m.div
+      initial={{y: '100%'}}
+      animate={{ y: '0%' }}
+      transition={{ duration: 1, ease: 'easeOut' }}
+      exit={{opacity: 1}}
+      className='home-page'>
       <div className="writeup">
-        <h1>Hi there, {greetings()}!!</h1>
-        <h2>I AM NNAMDI JOHN<br /> NNUFOROLE </h2>
-        <h1 className=''>A FrontEnd Developer</h1>
-        <h3>I Am A {text}</h3>
-        <button className='hover' onClick={handleClick}>Contact me</button>
+        <m.h1
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        >Hi there, {greetings()}!!
+        </m.h1>
+        <m.h2
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        >I AM NNAMDI JOHN<br /> NNUFOROLE
+         </m.h2>
+        <m.h1 
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        className=''>A FrontEnd Developer
+        </m.h1>
+        <m.h3
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        >I Am A {text}
+        </m.h3>
+        <m.button
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}} className='hover' onClick={handleClick}>Contact me
+        </m.button>
       </div>
       <img src={Image} alt="nerd" />
       <div className="icons">
@@ -74,7 +104,7 @@ function Home() {
 
         {/*</div>*/}
       </div>
-    </div>
+    </m.div>
   )
 }
 

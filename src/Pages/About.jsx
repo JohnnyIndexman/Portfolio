@@ -6,11 +6,17 @@ import image4 from './Image/css3.png'
 import image5 from './Image/react.png'
 import image6 from './Image/javaScript.png'
 import image7 from './Image/html.png'
+import { motion as m } from 'framer-motion'
 
 
 function About() {
   return (
-    <div className='about'>
+    <m.div 
+    initial={{y: '100%'}}
+    animate={{ y: '0%' }}
+    transition={{ duration: 1, ease: 'easeOut' }}
+    exit={{opacity: 1}}
+    className='about'>
       <div className="intro mb">
         <img src={image1} alt="Me"  className='img'/>
         <div className="card name">
@@ -69,7 +75,7 @@ function About() {
       </div>
 
 
-    </div>
+    </m.div>
   )
 }
 
