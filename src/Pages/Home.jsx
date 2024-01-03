@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Image from './Image/images (7).jpeg'
 import { useNavigate, Link } from 'react-router-dom';
-import { easeOut, motion as m } from 'framer-motion'
+import { motion as m } from 'framer-motion'
 
 
 
@@ -57,7 +57,7 @@ function Home() {
     <m.div
       initial={{y: '100%'}}
       animate={{ y: '0%' }}
-      transition={{ duration: 1, ease: 'easeOut' }}
+      transition={{ duration: 1 }}
       exit={{opacity: 1}}
       className='home-page'>
       <div className="writeup">
