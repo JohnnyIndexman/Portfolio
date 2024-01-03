@@ -479,7 +479,7 @@ textarea:focus{
   }
 
   .header1 > h1 a{
-    font-size: 25px;
+    font-size: 28px;
   }
 
   h1{
@@ -500,8 +500,8 @@ textarea:focus{
     }
     
     .home-page button{
-      width: 80px;
-      font-size: 11px;
+      width: 100px;
+      font-size: 15px;
       align-self: center;
       padding: 8px;
     }
@@ -533,7 +533,7 @@ textarea:focus{
       word-spacing: 5px;
       letter-spacing: 5px;
       text-align: center;
-      font-size: 20px;
+      font-size: 22px;
     }
 
     .home-page h3{
