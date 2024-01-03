@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect, useState, useCallback, useMemo } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Image from './Image/images (7).jpeg'
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { motion as m } from 'framer-motion'
 
 
 function Home() {
-  const words = ['React Developer', 'WordPress Developer', 'Quality Assurance Tester'];
+  const words = useMemo(() => ['React Developer', 'WordPress Developer', 'Quality Assurance Tester'], []);
 const [wordIndex, setWordIndex] = useState(0);
 const [text, setText] = useState('');
 const [isDeleting, setIsDeleting] = useState(false);
