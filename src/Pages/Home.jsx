@@ -31,7 +31,7 @@ function Home() {
     const timer = setTimeout(() => type(), isDeleting ? 100 : 200);
 
     return () => clearTimeout(timer);
-  }, [wordIndex, isDeleting, text]);
+  }, [type]);
 
   const greetings = () => {
     let currentTime = new Date().getHours()
