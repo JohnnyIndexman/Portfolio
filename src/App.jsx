@@ -21,7 +21,7 @@ function App() {
   ))
   return (
     <div className="App main">
-      <AnimatePresence mode='wait'>
+      <AnimatePresence>
         <div className='body-container' key={router.pathname}>
           <RouterProvider router={router} />
         </div>

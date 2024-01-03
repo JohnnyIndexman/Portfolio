@@ -22,7 +22,7 @@ function Projects() {
         console.log(err)
          setError('An error occured while trying to fetch the data')
         })
-  }, []);
+  }, [data, error]);
   
 
   return (
