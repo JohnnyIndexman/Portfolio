@@ -25,7 +25,7 @@ const type = useCallback(() => {
     setIsDeleting(false);
     setWordIndex((current) => (current + 1) % words.length);
   }
-}, [isDeleting, text, wordIndex]); 
+}, [isDeleting, text, wordIndex, words]); 
 
 useEffect(() => {
   const timer = setTimeout(() => type(), isDeleting ? 100 : 200);
