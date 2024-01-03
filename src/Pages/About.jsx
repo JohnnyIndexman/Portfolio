@@ -14,12 +14,20 @@ function About() {
     <m.div 
     initial={{y: '100%'}}
     animate={{ y: '0%' }}
-    transition={{ duration: 1, ease: 'easeOut' }}
+    transition={{ duration: 1 }}
     exit={{opacity: 1}}
     className='about'>
-      <div className="intro mb">
+      <m.div
+      initial={{y: '100%'}}
+      animate={{y: '0%'}}
+      transition={{delay:1, duration:1}}
+      className="intro mb">
         <img src={image1} alt="Me"  className='img'/>
-        <div className="card name">
+        <m.div
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        className="card name">
           <h1 className='mb'>Hello!!</h1>
           <p>I'm Nnamdi Nnuforole,<br />
             a budding React and WordPress devoloper<br />
@@ -29,11 +37,19 @@ function About() {
             from Michael Okpara University of Agriculture Umudike,<br />
             Nigeria, where my journey into the world began<br />
           </p>
-        </div>
-      </div>
-      <div className="underline mb"></div>
+        </m.div>
+      </m.div>
+      <m.div
+      initial={{y: '100%'}}
+      animate={{y: '0%'}}
+      transition={{delay:1, duration:1}}
+      className="underline mb"></m.div>
       <div className="skill-mission flex mb">
-        <div className="skills card">
+        <m.div
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        className="skills card">
           <h1 className='mb'>Skills</h1>
           <ul className='ul'>
             <li><span className='span'>React Development:</span>
@@ -49,8 +65,12 @@ function About() {
               ensuring the delivery of high-quality software products.
             </li><br />
           </ul>
-        </div>
-        <div className="mission card">
+        </m.div>
+        <m.div
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        className="mission card">
           <h1 className='mb'>Mission</h1>
           <p>I am a self-taught React developor passionate about leveraging my skills to create<br />
             innovative and seamless digital experiences. Whether <br />
@@ -58,20 +78,33 @@ function About() {
             feature-rich websites using WordPress, I am Dedicated to<br />
             pushing the boundaries of what technologgy can achieve.<br />
           </p>
-        </div>
+        </m.div>
 
       </div>
-      <div className="underline mb"></div>
+      <m.div 
+      initial={{y: '100%'}}
+      animate={{y: '0%'}}
+      transition={{delay:1, duration:1}}
+      className="underline mb"></m.div>
       <div className="skill-image">
-        <h1 className='mb'>My Skills</h1>
-        <div>
+        <m.h1 
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        className='mb'>My Skills
+        </m.h1>
+        <m.div
+        initial={{y: '100%'}}
+        animate={{y: '0%'}}
+        transition={{delay:1, duration:1}}
+        >
           <img className='img' src={image7} alt="html-logo" />
           <img className='img' src={image4} alt="css-logo" />
           <img className='img' src={image6} alt="javaScript-logo" />
           <img className='img' src={image5} alt="react-logo" />
           <img className='img' src={image2} alt="chakra-logo" />
           <img className='img' src={image3} alt="github-logo" />
-        </div>
+        </m.div>
       </div>
 
 
