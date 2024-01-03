@@ -1,37 +1,38 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Image from './Image/images (7).jpeg'
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { motion as m } from 'framer-motion'
 
 
 
 function Home() {
-  const words = [' React Developer', ' WordPress Developer', ' Quality Assurance Tester'];
-  const [wordIndex, setWordIndex] = useState(0);
-  const [text, setText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
+  const words = ['React Developer', 'WordPress Developer', 'Quality Assurance Tester'];
+const [wordIndex, setWordIndex] = useState(0);
+const [text, setText] = useState('');
+const [isDeleting, setIsDeleting] = useState(false);
 
-  function type() {
-    const currentWord = words[wordIndex];
-    const shouldDelete = isDeleting ? 1 : -1;
-    console.log(isDeleting)
+const type = useCallback(() => {
+  const currentWord = words[wordIndex];
+  const shouldDelete = isDeleting ? 1 : -1;
+  console.log(isDeleting);
 
-    setText((current) => currentWord.substring(0, current.length - shouldDelete));
+  setText((current) => currentWord.substring(0, current.length - shouldDelete));
 
-    if (!isDeleting && text === currentWord) {
-      setTimeout(() => setIsDeleting(true), 500);
-    } else if (isDeleting && text === '') {
-      setIsDeleting(false);
-      setWordIndex((current) => (current + 1) % words.length);
-    }
+  if (!isDeleting && text === currentWord) {
+    setTimeout(() => setIsDeleting(true), 500);
+  } else if (isDeleting && text === '') {
+    setIsDeleting(false);
+    setWordIndex((current) => (current + 1) % words.length);
   }
+}, [isDeleting, text, wordIndex]); 
 
-  useEffect(() => {
-    const timer = setTimeout(() => type(), isDeleting ? 100 : 200);
+useEffect(() => {
+  const timer = setTimeout(() => type(), isDeleting ? 100 : 200);
 
-    return () => clearTimeout(timer);
-  }, [type, isDeleting, text, wordIndex]);
+  return () => clearTimeout(timer);
+}, [type, isDeleting, text, wordIndex]);
+
 
   const greetings = () => {
     let currentTime = new Date().getHours()
@@ -95,12 +96,12 @@ function Home() {
       <div className="icons">
 
         {/*<div className="icons blue">*/}
-        <Link to='https://github.com/JohnnyIndexman'>
+        <a href='https://github.com/JohnnyIndexman'>
           <FaGithub size='22px' className='hover' />
-        </Link>
-        <Link to='https://www.linkedin.com/in/nnamdi-nnuforole-6135b5250/'>
+        </a>
+        <a href='https://www.linkedin.com/in/nnamdi-nnuforole-6135b5250/'>
           <FaLinkedin size='22px' className='hover' />
-        </Link>
+        </a>
 
         {/*</div>*/}
       </div>
