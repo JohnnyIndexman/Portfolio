@@ -169,7 +169,7 @@
 .home-page img{
 clip: circle();
 width: 40%;
-height: 350px;
+height: auto;
 }
 
 .home-page button{
@@ -190,7 +190,7 @@ height: 350px;
 .home-page h1{
   font-family: 'Alata', sans-serif;
   margin-bottom: 30px;
-  font-size: 50px;
+  font-size: 38px;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -210,7 +210,7 @@ height: 350px;
   word-spacing: 8px;
   letter-spacing: 3px;
   margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -429,10 +429,18 @@ textarea:focus{
   box-sizing: border-box;
   padding: 20px;
   height: fit-content;
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   border: 1px solid none;
   background-color: #f6f4f4;
   box-shadow: 0px 0px 4px #808080;
+}
+ 
+.portfolio span{
+  color: red;
 }
 
 .class1 h3{
@@ -454,6 +462,7 @@ textarea:focus{
   margin: 80px 70px 50px 70px;
   display: grid;
   grid-template-columns: auto auto auto;
+  gap: 25px;
 }
 
 @media (max-width: 768px){

@@ -7,7 +7,7 @@ import { motion as m } from 'framer-motion'
 
 
 function Home() {
-  const words = useMemo(() => ['React Developer', 'WordPress Developer', 'Quality Assurance Tester'], []);
+  const words = useMemo(() => ['React Developer', 'WordPress Developer', 'Software Tester'], []);
 const [wordIndex, setWordIndex] = useState(0);
 const [text, setText] = useState('');
 const [isDeleting, setIsDeleting] = useState(false);
@@ -15,7 +15,6 @@ const [isDeleting, setIsDeleting] = useState(false);
 const type = useCallback(() => {
   const currentWord = words[wordIndex];
   const shouldDelete = isDeleting ? 1 : -1;
-  console.log(isDeleting);
 
   setText((current) => currentWord.substring(0, current.length - shouldDelete));
 

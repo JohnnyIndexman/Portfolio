@@ -1,11 +1,10 @@
-import React from 'react'
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion as m } from 'framer-motion'
 
-function Contact() {
+export const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -13,11 +12,12 @@ function Contact() {
 
     emailjs.sendForm('service_n6wbrrt', 'template_0cyh3rm', form.current, 'QblXBudopYQofeY6R')
       .then((result) => {
-        console.log(result.text);
+          console.log(result.text);
       }, (error) => {
-        console.log(error.text);
+          console.log(error.text);
       });
   };
+
   return (
     <m.div
       initial={{ y: '100%' }}
@@ -36,19 +36,18 @@ function Contact() {
             <input type="text"
               name="user_name"
             />
+            <span></span>
             <label>Email</label>
             <input type="email"
               name="user_email"
             />
+             <span></span>
             <label>Message</label>
             <textarea name="message"
               placeholder='Enter Your Message Here...'
               className='textarea'
             />
-            {/* <input type="submit"
-              value="Send"
-              className='button'
-  />*/}
+             <span></span>
             <button className='button'
               type='submit'
             >Send
