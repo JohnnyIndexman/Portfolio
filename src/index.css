@@ -481,10 +481,15 @@ textarea:focus{
   .header1{
     width: 100%;
     padding: 10px 20px 10px 20px;
+    position: relative;
   }
 
   .header{
     width: 100%;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
   }
 
   .header1 > h1 a{
@@ -558,6 +563,7 @@ textarea:focus{
 
     .about{
       margin: 40px 20px 40px 20px;
+      position: relative;
     }
 
     .intro{
