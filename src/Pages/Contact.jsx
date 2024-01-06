@@ -10,7 +10,6 @@ export const Contact = () => {
   const [nameError, setNameError] = useState('')
   const [mailError, setMailError] = useState('')
 const [messageError, setMessageError] = useState('')
-{/*const [error, setError] = useState('')*/}
   let isValid = false
 
   const validate = () => {
@@ -45,7 +44,8 @@ const [messageError, setMessageError] = useState('')
     e.preventDefault();
     validate()
     if(!isValid){
-      return}
+      return
+    }
       emailjs.sendForm('service_n6wbrrt', 'template_0cyh3rm', form.current, 'QblXBudopYQofeY6R')
       .then((result) => {
           console.log(result.text);
