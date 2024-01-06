@@ -1,16 +1,52 @@
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion as m } from 'framer-motion'
 
 export const Contact = () => {
   const form = useRef();
 
+  const [nameError, setNameError] = useState('')
+  const [mailError, setMailError] = useState('')
+const [messageError, setMessageError] = useState('')
+{/*const [error, setError] = useState('')*/}
+  let isValid = false
+
+  const validate = () => {
+    if (!form.current || !form.current.name || form.current.name.value === '') {
+      setNameError('Name is required!');
+      isValid = false;
+    }
+  
+   else if (!form.current || !form.current.email || form.current.email.value === '') {
+      setMailError('Email is required!');
+      isValid = false;
+    }
+  
+    else if (!form.current || !form.current.message || form.current.message.value === '') {
+      setMessageError('Message is required!');
+      isValid = false;
+    }
+    else{
+      isValid = true
+      setMailError('')
+      setMessageError('')
+      setNameError('')
+    }
+  
+   /* setError('');
+    return true;*/
+  };
+
+
+
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_n6wbrrt', 'template_0cyh3rm', form.current, 'QblXBudopYQofeY6R')
+    validate()
+    if(!isValid){
+      return}
+      emailjs.sendForm('service_n6wbrrt', 'template_0cyh3rm', form.current, 'QblXBudopYQofeY6R')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -18,6 +54,7 @@ export const Contact = () => {
       });
   };
 
+  
   return (
     <m.div
       initial={{ y: '100%' }}
@@ -32,22 +69,26 @@ export const Contact = () => {
             I'm thrilled to hear from you.
           </p>
           <form ref={form} onSubmit={sendEmail}>
-            <label>Name</label>
+            <label htmlFor="name">Name</label>
             <input type="text"
               name="user_name"
+              id="name"
             />
-            <span></span>
-            <label>Email</label>
+            <span>
+              {nameError}
+            </span>
+            <label htmlFor="email">Email</label>
             <input type="email"
               name="user_email"
+              id="email"
             />
-             <span></span>
+             <span>{mailError}</span>
             <label>Message</label>
             <textarea name="message"
               placeholder='Enter Your Message Here...'
               className='textarea'
             />
-             <span></span>
+             <span>{messageError}</span>
             <button className='button'
               type='submit'
             >Send
