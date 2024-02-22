@@ -30,6 +30,24 @@
         "title": "Vanlife App",
         "image": "./Images/vanlife.png",
         "link": "https://nvanlife.netlify.app/"
+    },
+    {
+        "id":6,
+        "title": "Interactive Card",
+        "image": "./Images/interactive-card.png",
+        "link": "https://index-card.netlify.app/"
+    },
+    {
+        "id":7,
+        "title": "Intro Section",
+        "image": "./Images/intro-section.png",
+        "link": "https://index-intro.netlify.app/"
+    },
+    {
+        "id":8,
+        "title": "Authenticaion Form",
+        "image": "./Images/authentication.png",
+        "link": "https://index-authenticate.netlify.app/"
     }
 
 ]
