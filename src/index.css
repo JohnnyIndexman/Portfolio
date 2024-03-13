@@ -20,7 +20,7 @@
   width: 100%;
   box-sizing: border-box;
   font-family: 'Alata', sans-serif;
-
+  user-select: none;
 }
 
 .header{
@@ -155,10 +155,12 @@
 
 .hamburger{
   display: none;
+  cursor: pointer;
 }
 
 .close{
   align-self: flex-start;
+  cursor: pointer;
 }
 
 /*home page rendering*/
