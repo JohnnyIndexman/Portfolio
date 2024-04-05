@@ -42,6 +42,12 @@
         "title": "Authenticaion Form",
         "image": "./Images/authentication.png",
         "link": "https://index-authenticate.netlify.app/"
+    },
+    {
+        "id":9,
+        "title": "E-commerce Page",
+        "image": "./Images/appnovia.png",
+        "link": "https://appnovia-test-uo3a.vercel.app/"
     }
 
 ]
