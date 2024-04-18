@@ -2,16 +2,10 @@
 
     {
         "id":1,
-        "title": "Loopstudio display-page",
-        "image": "./Images/display.png",
-        "link": "https://nloopstudio.netlify.app/",
+        "title": "E-commerce Home-page",
+        "image": "./Images/e-commerce.png",
+        "link": "https://indexcommerce.netlify.app/",
         "description": "A simple studio landing-page constructed using vanila css and javaScript"
-    },
-    {
-        "id":2,
-        "title": "Tenxies Game",
-        "image": "./Images/tenxies.png",
-        "link": "https://ntenzies.netlify.app/"
     },
     {
         "id":3,
