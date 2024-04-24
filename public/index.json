@@ -27,9 +27,9 @@
     },
     {
         "id":7,
-        "title": "Intro Section",
-        "image": "./Images/intro-section.png",
-        "link": "https://index-intro.netlify.app/"
+        "title": "Emergency Report App",
+        "image": "./Images/emergency.png",
+        "link": "https://nnamdicitizen.netlify.app/"
     },
     {
         "id":8,
