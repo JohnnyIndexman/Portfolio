@@ -29,6 +29,8 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  left: 0;
+  right: 0;
 }
 
 .header1{
@@ -412,6 +414,7 @@ label{
   font-size: 18px;
   margin-top: 20px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 
