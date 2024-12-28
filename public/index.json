@@ -20,6 +20,12 @@
         "link": "https://vanlife-five.vercel.app/"
     },
     {
+        "id": 10,
+        "title": "Violette Stores(WordPress)",
+        "image": "./Images/violette.png",
+        "link": "https://violette.com.ng/"
+    },
+    {
         "id":6,
         "title": "Interactive Card",
         "image": "./Images/interactive-card.png",
@@ -36,12 +42,7 @@
         "title": "E-commerce Page",
         "image": "./Images/appnovia.png",
         "link": "https://appnovia-test-uo3a.vercel.app/"
-    },
-    {
-        "id": 10,
-        "title": "Violette Stores(WordPress)",
-        "image": "./Images/violette.png",
-        "link": "https://violette.com.ng/"
     }
+    
 
 ]
