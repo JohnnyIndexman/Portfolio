@@ -26,16 +26,10 @@
         "link": "https://index-card.netlify.app/"
     },
     {
-        "id":7,
-        "title": "Index Blogs",
-        "image": "./Images/flexisafwk4.png",
-        "link": "https://flexiwk4.netlify.app/"
-    },
-    {
         "id":8,
-        "title": "Authenticaion Form",
-        "image": "./Images/authentication.png",
-        "link": "https://index-authenticate.netlify.app/"
+        "title": "Note App",
+        "image": "./Images/note.png",
+        "link": "https://nnamdiflexitest.vercel.app/"
     },
     {
         "id":9,

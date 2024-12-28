@@ -261,7 +261,8 @@ height: auto;
 .intro{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-start;
 }
 
 .card{
@@ -299,7 +300,8 @@ height: auto;
 }
 
 .mission{
-  align-self: flex-start;
+  /* align-self: flex-start; */
+  width: 50%;
 }
 
 .ul{
@@ -309,7 +311,7 @@ height: auto;
 }
 
 .skills{
-  width: 70%;
+  width: 50%;
 }
 
 .underline{
@@ -332,6 +334,10 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.skill-mission {
+  align-items: flex-start;
 }
 
 /*contact page styling*/
