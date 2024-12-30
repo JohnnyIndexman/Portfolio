@@ -329,6 +329,10 @@ p{
   height: 100px;
 }
 
+.skilachy {
+  display: none;
+}
+
 .skill-image{
   display: flex;
   flex-direction: column;
