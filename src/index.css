@@ -331,6 +331,8 @@ p{
 
 .skilachy {
   display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .skill-image{
