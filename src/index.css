@@ -680,6 +680,10 @@ textarea:focus{
       align-items: center;
       gap: 10px;
     }
+
+    .mission {
+      width: 100%;
+    }
   
 }
 
